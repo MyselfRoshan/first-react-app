@@ -1,0 +1,177 @@
+/* Box sizing rules*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reseet margin, padding and font-size */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a.nav-links {
+  text-decoration: none;
+}
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Remove animations and transition on window resize */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+:root {
+  --primary-clr: hsl(193, 95%, 68%);
+  --primary-white-400: hsl(0, 0%, 100%);
+  --primary-white-300: hsl(210, 65%, 92%);
+  --primary-black-400: hsl(233, 12%, 15%);
+  --primary-black-300: hsl(218, 10%, 22%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary-white-400);
+}
+.container {
+  display: grid;
+  grid-template-columns: minmax(5rem, 1fr) minmax(0, 40rem) minmax(5rem, 1fr);
+  padding-block: var(--py, 1rem);
+}
+header {
+  --gap: 3rem;
+  --py: 1.9375rem;
+  background-color: var(--primary-black-400);
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.nav-logo {
+  height: 28.93px;
+  aspect-ratio: 1;
+}
+
+.nav-logo + figcaption {
+  color: var(--primary-clr);
+  font-weight: 700;
+}
+
+.primary-nav,
+main > *,
+footer > * {
+  grid-column: 2/3;
+}
+
+.primary-nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav-link {
+  color: var(--primary-white-300);
+  font-style: 1.390625rem;
+}
+
+main {
+  margin-block-start: 0 !important;
+  padding: 1.5rem;
+  background-image: url('./assets/react-icon-large.png');
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-black-300);
+}
+.primary-heading {
+  font-size: 2.475rem;
+  padding-block: 0.75rem;
+  font-weight: 700;
+}
+.primary-heading + ul > li::marker {
+  color: var(--primary-clr);
+  text-align: center;
+  font-size: 1.35rem;
+}
+ul > li {
+  margin-left: 3rem;
+  line-height: 19px;
+  margin-block: 0.15rem;
+  list-style-position: inside;
+}
+
+footer {
+  justify-items: center;
+  background-color: var(--primary-black-300);
+}
