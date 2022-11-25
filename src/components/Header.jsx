@@ -3,7 +3,7 @@ import ReactImg from '../assets/react.svg';
 
 function Header() {
   return (
-    <header className="container">
+    <header>
       <nav className="primary-nav">
         <figure>
           <img className="nav-logo" src={ReactImg} alt="react logo" />
