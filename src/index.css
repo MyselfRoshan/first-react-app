@@ -90,7 +90,7 @@ img:not([alt]) {
   --primary-white-400: hsl(0, 0%, 100%);
   --primary-white-300: hsl(210, 65%, 92%);
   --primary-black-400: hsl(233, 12%, 15%);
-  --primary-black-300: hsl(218, 10%, 22%);
+  --primary-black-300: hsl(217, 14%, 18%);
 }
 
 body {
@@ -101,12 +101,11 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: minmax(5rem, 1fr) minmax(0, 40rem) minmax(5rem, 1fr);
-  padding-block: var(--py, 1rem);
+  grid-template-columns: minmax(5rem, 1fr) minmax(0, 50rem) minmax(5rem, 1fr);
 }
 header {
   --gap: 3rem;
-  --py: 1.9375rem;
+  padding: 1rem 2rem;
   background-color: var(--primary-black-400);
 }
 
@@ -127,9 +126,7 @@ figure {
   font-weight: 700;
 }
 
-.primary-nav,
-main > *,
-footer > * {
+#root {
   grid-column: 2/3;
 }
 
@@ -149,9 +146,8 @@ main {
   margin-block-start: 0 !important;
   padding: 1.5rem;
   background-image: url('./assets/react-icon-large.png');
-  background-position-x: right;
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-color: var(--primary-black-300);
 }
 .primary-heading {
@@ -172,6 +168,8 @@ ul > li {
 }
 
 footer {
-  justify-items: center;
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
   background-color: var(--primary-black-300);
 }

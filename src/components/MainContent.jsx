@@ -2,7 +2,7 @@ import React from 'react';
 
 function MainContent() {
   return (
-    <main className="container">
+    <main>
       <h1 className="primary-heading">Fun Facts About React</h1>
       <ul>
         <li>Was first released in 2013</li>
